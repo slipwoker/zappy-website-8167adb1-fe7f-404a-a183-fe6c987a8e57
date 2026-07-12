@@ -1626,6 +1626,33 @@ if (document.readyState === 'complete') {
 })();
 
 
+/* Added Component Script */
+/* Optional: Intersection Observer for fade-in animation */
+document.addEventListener('DOMContentLoaded', function() {
+  const cards = document.querySelectorAll('.mp-testimonials-card');
+  
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+
+    cards.forEach((card, index) => {
+      card.style.opacity = '0';
+      card.style.transform = 'translateY(20px)';
+      card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+      card.style.transitionDelay = (index * 0.1) + 's';
+      observer.observe(card);
+    });
+  }
+});
+
+
 /* ZAPPY_PUBLISHED_LIGHTBOX_RUNTIME */
 (function(){
   try {
