@@ -9139,190 +9139,186 @@ div[id*="mic-access-tool-box"] button[class*="reset"] * {
   display: flex !important;
 }
 
-/* Added Component Styles */
-.mp-testimonials {
-  background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
-  padding: 80px 20px;
-  direction: rtl;
-  font-family: system-ui, sans-serif;
+
+/* Hero Video Background Styles */
+.hero-video-background {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  overflow: hidden !important;
+  z-index: 0 !important;
+  pointer-events: auto;
 }
 
-.mp-testimonials-container {
-  max-width: 1200px;
-  margin: 0 auto;
+.hero-video-background .hero-video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.5));
+  z-index: 1;
+  pointer-events: none;
 }
 
-/* Header */
-.mp-testimonials-header {
-  text-align: center;
-  margin-bottom: 56px;
+.hero-video-background .hero-video {
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+  min-width: 100% !important;
+  min-height: 100% !important;
+  width: auto !important;
+  height: auto !important;
+  transform: translate(-50%, -50%) !important;
+  object-fit: cover !important;
+  z-index: 0 !important;
 }
 
-.mp-testimonials-badge {
-  display: inline-block;
-  background: rgba(17, 24, 39, 0.06);
-  color: var(--primary, #111827);
-  font-size: 14px;
-  font-weight: 600;
-  padding: 8px 20px;
-  border-radius: 50px;
-  margin-bottom: 16px;
-  letter-spacing: 0.3px;
+.hero-video-background .hero-video-iframe {
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+  width: 100vw !important;
+  height: 56.25vw !important; /* 16:9 aspect ratio */
+  min-height: 100% !important;
+  min-width: 177.78vh !important; /* 16:9 aspect ratio */
+  transform: translate(-50%, -50%) !important;
+  pointer-events: none !important;
+  z-index: 0 !important;
 }
 
-.mp-testimonials-title {
-  font-size: 2.25rem;
-  font-weight: 800;
-  color: var(--primary, #111827);
-  margin: 0 0 12px 0;
-  line-height: 1.25;
-}
-
-.mp-testimonials-subtitle {
-  font-size: 1.1rem;
-  color: #4b5563;
-  max-width: 600px;
-  margin: 0 auto;
-  line-height: 1.6;
-}
-
-/* Grid */
-.mp-testimonials-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 28px;
-}
-
-/* Card */
-.mp-testimonials-card {
-  background: #ffffff;
-  border: 1px solid rgba(17, 24, 39, 0.08);
-  border-radius: 16px;
-  padding: 32px 28px 28px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04), 0 4px 12px rgba(0, 0, 0, 0.03);
-  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
-  display: flex;
-  flex-direction: column;
-}
-
-.mp-testimonials-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
-  border-color: rgba(17, 24, 39, 0.15);
-}
-
-/* Card Header */
-.mp-testimonials-card-header {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  margin-bottom: 20px;
-}
-
-.mp-testimonials-avatar-wrapper {
-  flex-shrink: 0;
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
-  overflow: hidden;
-  border: 2px solid rgba(17, 24, 39, 0.1);
-}
-
-.mp-testimonials-avatar {
+.hero-video-background .hero-video-fallback {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  display: block;
+  z-index: 0;
 }
 
-.mp-testimonials-rating {
-  display: flex;
-  gap: 2px;
+/* Hidden original hero image and its container */
+.hero-original-image-hidden {
+  display: none !important;
 }
 
-.mp-testimonials-star {
-  color: #f59e0b;
-  font-size: 18px;
-  line-height: 1;
+/* Hidden original hero overlay (replaced by video overlay) */
+.hero-original-overlay-hidden {
+  display: none !important;
 }
 
-/* Quote */
-.mp-testimonials-quote {
-  margin: 0 0 20px 0;
-  flex-grow: 1;
+/* When hero has video, center the content that's not the video background */
+/* This handles cases where original layout had image + text side-by-side */
+.hero-section:has(.hero-video-background),
+[class*="hero"]:has(.hero-video-background) {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
+  text-align: center !important;
 }
 
-.mp-testimonials-quote p {
-  font-size: 0.975rem;
-  line-height: 1.75;
-  color: #374151;
-  margin: 0;
-  font-style: italic;
-  position: relative;
-  padding-right: 16px;
-  border-right: 3px solid var(--primary, #111827);
+/* Content containers in hero with video - center them (exclude dividers, scrims, zoom wrappers) */
+.hero-section:has(.hero-video-background) > *:not(.hero-video-background):not(.zappy-section-controls):not([class*="zappy-"]):not([class*="divider"]):not([class*="scrim"]):not([data-zappy-zoom-wrapper]),
+[class*="hero"]:has(.hero-video-background) > *:not(.hero-video-background):not(.zappy-section-controls):not([class*="zappy-"]):not([class*="divider"]):not([class*="scrim"]):not([data-zappy-zoom-wrapper]) {
+  text-align: center !important;
+  max-width: 900px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
 }
 
-/* Author */
-.mp-testimonials-author {
-  border-top: 1px solid rgba(17, 24, 39, 0.06);
-  padding-top: 16px;
+/* Section controls must keep their absolute positioning */
+.hero-section:has(.hero-video-background) .zappy-section-controls,
+[class*="hero"]:has(.hero-video-background) .zappy-section-controls {
+  position: absolute !important;
+  top: 12px !important;
+  left: 12px !important;
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  width: auto !important;
+  max-width: none !important;
+  margin: 0 !important;
+  text-align: left !important;
 }
 
-.mp-testimonials-name {
-  display: block;
-  font-size: 1rem;
-  font-weight: 700;
-  color: var(--primary, #111827);
-  margin-bottom: 4px;
+/* Hero video edit cursor - only shown in edit mode */
+body.zappy-edit-mode .zappy-editable-video-bg {
+  cursor: url("data:image/svg+xml,%3Csvg width='18' height='18' viewBox='0 0 50 50' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M29.2344 9.93125L4.87351 34.2922C4.67351 34.4922 4.52976 34.7437 4.46101 35.0203L1.60789 46.4984C1.47664 47.0312 1.63289 47.5922 2.02039 47.9797C2.40945 48.3688 2.97351 48.5219 3.50164 48.3922L14.9798 45.5406C15.2548 45.4719 15.5063 45.3297 15.7079 45.1281L40.0688 20.7672L29.2344 9.93125Z' fill='%23FF0083'/%3E%3Cpath d='M46.1937 3.80781C43.2062 0.820311 38.3468 0.820311 35.3578 3.80781L31.4421 7.72344L42.2781 18.5594L46.1937 14.6437C49.1812 11.6547 49.1812 6.79531 46.1937 3.80781Z' fill='%23FF0083'/%3E%3C/svg%3E") 2 13, pointer !important;
 }
 
-.mp-testimonials-company {
-  display: block;
-  font-size: 0.85rem;
-  color: #6b7280;
-}
-
-/* Responsive */
-@media (max-width: 1024px) {
-  .mp-testimonials-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 24px;
+/* Fallback for browsers/devices that don't support video */
+@media (prefers-reduced-motion: reduce) {
+  .hero-video-background .hero-video,
+  .hero-video-background .hero-video-iframe {
+    display: none;
   }
-
-  .mp-testimonials-title {
-    font-size: 1.9rem;
+  .hero-video-background .hero-video-fallback {
+    display: block;
   }
 }
 
+/* Mobile responsive styles for hero video */
 @media (max-width: 768px) {
-  .mp-testimonials {
-    padding: 56px 16px;
+  .hero-video-background .hero-video {
+    /* On mobile, hero sections are often taller than wide, so we need to ensure the video fills the height */
+    width: auto !important;
+    height: 100% !important;
+    min-width: 100% !important;
+    min-height: 100% !important;
+    /* Use a larger scale to ensure no gaps on tall mobile hero sections */
+    object-fit: cover !important;
   }
-
-  .mp-testimonials-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
-    max-width: 520px;
-    margin: 0 auto;
+  
+  .hero-video-background .hero-video-iframe {
+    /* For iframes on mobile, use height-based sizing since hero is often taller */
+    width: 177.78vh !important; /* 16:9 based on height */
+    height: 100vh !important;
+    min-width: 100% !important;
+    min-height: 100% !important;
   }
-
-  .mp-testimonials-title {
-    font-size: 1.6rem;
+  
+  /* Ensure hero section has a minimum height on mobile */
+  .hero-section:has(.hero-video-background),
+  [class*="hero"]:has(.hero-video-background) {
+    min-height: 60vh !important;
   }
-
-  .mp-testimonials-subtitle {
-    font-size: 1rem;
-  }
-
-  .mp-testimonials-card {
-    padding: 24px 20px 22px;
-  }
-
-  .mp-testimonials-header {
-    margin-bottom: 40px;
+  
+  /* Adjust content padding on mobile (exclude dividers, scrims, zoom wrappers) */
+  .hero-section:has(.hero-video-background) > *:not(.hero-video-background):not(.zappy-section-controls):not([class*="zappy-"]):not([class*="divider"]):not([class*="scrim"]):not([data-zappy-zoom-wrapper]),
+  [class*="hero"]:has(.hero-video-background) > *:not(.hero-video-background):not(.zappy-section-controls):not([class*="zappy-"]):not([class*="divider"]):not([class*="scrim"]):not([data-zappy-zoom-wrapper]) {
+    max-width: 100% !important;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
   }
 }
+
+/* Extra small screens */
+@media (max-width: 480px) {
+  .hero-video-background .hero-video-iframe {
+    /* Ensure full coverage on very tall mobile screens */
+    width: 200vh !important;
+    height: 100vh !important;
+  }
+  
+  .hero-section:has(.hero-video-background),
+  [class*="hero"]:has(.hero-video-background) {
+    min-height: 50vh !important;
+  }
+}
+
+/* Hero content should be above the video (exclude dividers which need position:absolute) */
+.hero-section:has(.hero-video-background) > *:not(.hero-video-background):not([class*="divider"]):not([class*="scrim"]):not([data-zappy-zoom-wrapper]),
+[class*="hero"]:has(.hero-video-background) > *:not(.hero-video-background):not([class*="divider"]):not([class*="scrim"]):not([data-zappy-zoom-wrapper]) {
+  position: relative;
+  z-index: 2;
+}
+
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,

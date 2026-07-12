@@ -353,10 +353,10 @@ html{box-sizing:border-box;-webkit-text-size-adjust:100%}*,*::before,*::after{bo
 <a class="skip-link" href="#main">דלג לתוכן הראשי</a>
   <nav class="navbar" dir="rtl">
   <button class="mobile-toggle" id="mobileToggle" aria-label="Menu">
-    <svg class="hamburger-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+    <svg style="display:block !important" class="hamburger-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
       <path d="M3 12h18M3 6h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
     </svg>
-    <svg class="close-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" style="display: none;">
+    <svg class="close-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" style="display:none !important">
       <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
     </svg>
   </button>
@@ -370,7 +370,7 @@ html{box-sizing:border-box;-webkit-text-size-adjust:100%}*,*::before,*::after{bo
   <div class="nav-container">
     <div class="nav-right-group"><div class="nav-brand">
       <a href="/" class="logo-link"><img class="logo" src="/assets/site-----image-1.webp" alt="MP שירותי תפעול לסוכני ביטוח" decoding="async" width="35" height="35"></a>
-    </div><ul class="nav-menu" id="navMenu"><li><a href="/">בית</a></li><li><a href="/services">שירותים</a></li><li><a href="/smart-system">מערכת חכמה</a></li><li><a href="/about">אודות</a></li><li class="mobile-contact-link nav-cta-mobile-item"><a href="/contact" class="nav-cta-btn">צור קשר</a></li><li style="display: none !important;" class="zappy-hidden-menu-item"><a href="/thank-you" class="nav-link">תודה</a></li></ul></div>
+    </div><ul class="nav-menu" id="navMenu"><li><a href="/">בית</a></li><li><a href="/services">שירותים</a></li><li><a href="/smart-system">מערכת חכמה</a></li><li><a href="/about">אודות</a></li><li class="mobile-contact-link nav-cta-mobile-item"><a href="/contact" class="nav-cta-btn">צור קשר</a></li></ul></div>
     
     
     
@@ -837,9 +837,17 @@ html{box-sizing:border-box;-webkit-text-size-adjust:100%}*,*::before,*::after{bo
 </script>
   
   <main id="main">
-    <section data-band-index="0" class="index-hero-section" data-layout-spec="בית-hero" data-hero-type="fullscreen-scrim">
+    <section data-band-index="0" class="index-hero-section" data-layout-spec="בית-hero" data-hero-type="fullscreen-scrim" style="; position: relative; overflow: hidden;">
+<div class="hero-video-background">
+  <div class="hero-video-overlay"></div>
+  <video class="hero-video" autoplay="" muted="" loop="" playsinline="">
+    <source src="/assets/hero-video-whatsapp-video-2026-07-12-at-22-35-13--2--1783889351563.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <img loading="eager" fetchpriority="high" class="hero-video-fallback" src="/assets/site-index-hero-image-1.webp" alt="Hero background" decoding="async">
+</div>
   <!-- Background Image -->
-  <img loading="eager" fetchpriority="high" data-hero-bg="true" class="hero-bg-img" data-placeholder="index-hero-image-1" data-context="A dark, cinematic professional insurance operations workstation at night. A modern desk with dual glowing laptop screens showing cyan-tinted insurance dashboard analytics, organized stacks of paper documents, subtle reflections, a calm office lamp, and a sophisticated dark blue-grey atmosphere." width="1920" height="1080" src="/assets/site-index-hero-image-1.webp" alt="מערכת תפעול חכמה לסוכני ביטוח - עמדת עבודה מקצועית" decoding="async">
+  <img loading="eager" fetchpriority="high" data-hero-bg="true" class="hero-bg-img hero-original-image-hidden" data-placeholder="index-hero-image-1" data-context="A dark, cinematic professional insurance operations workstation at night. A modern desk with dual glowing laptop screens showing cyan-tinted insurance dashboard analytics, organized stacks of paper documents, subtle reflections, a calm office lamp, and a sophisticated dark blue-grey atmosphere." width="1920" height="1080" src="/assets/site-index-hero-image-1.webp" alt="מערכת תפעול חכמה לסוכני ביטוח - עמדת עבודה מקצועית" style="; display: none !important;" decoding="async">
 
   <!-- Scrim Overlay -->
   <div class="hero-scrim" aria-hidden="true"></div>
