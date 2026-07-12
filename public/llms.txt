@@ -7,41 +7,41 @@
 ## Pages
 
 ### בית
-https://mp-8167adb1.zappy5.app
+https://example.com
 משחררים אתכם מהבירוקרטיה עם שירותי תפעול מקיפים לסוכני ביטוח עצמאיים. מעקב בזמן אמת, שקיפות מלאה וניהול משימות חכם. הצטרפו לשקט הנפשי שמאחורי הסוכן.
 
 ### שירותים
-https://mp-8167adb1.zappy5.app/services
+https://example.com/services
 מטיפול בטפסים ועד מול חברות הביטוח – צוות המומחים שלנו דואג לכל המשימות האדמיניסטרטיביות. התמקדו במכירות בזמן שאנחנו מטפלים ברפרט הביטוח שלכם במקצועיות.
 
 ### מערכת חכמה
-https://mp-8167adb1.zappy5.app/smart-system
+https://example.com/smart-system
 הכירו את המערכת הקניינית שלנו לניהול משימות, מעקב בזמן אמת ושקיפות חסרת תקדים. כל פעולה מתועדת, כל סטטוס ברור – השקט הנפשי שלכם מתחיל פה.
 
 ### אודות
-https://mp-8167adb1.zappy5.app/about
+https://example.com/about
 מייק פרץ והצוות מביאים ניסיון עשיר בתפעול סוכנויות ביטוח. אנחנו לא רק ספק שירות – אנחנו השותף השקט שמאפשר לסוכנים עצמאיים לצמוח. הכירו את הסיפור מאחורי השקט.
 
 ### צור קשר
-https://mp-8167adb1.zappy5.app/contact
+https://example.com/contact
 מוכנים להעביר את העומס התפעולי אלינו? השאירו פרטים ונחזור אליכם עם פתרון מותאם אישית. בואו לגלות איך השקט הנפשי יכול להפוך למנוע הצמיחה של הסוכנות שלכם.
 
 ### תודה שפניתם אלינו
-https://mp-8167adb1.zappy5.app/thank-you
+https://example.com/thank-you
 MP שירותי תפעול לסוכני ביטוח - תודה שפניתם אלינו
 
 ## Legal & Policy
 
 ### Privacy Policy
-https://mp-8167adb1.zappy5.app/privacy
+https://example.com/privacy
 Information about how user data is collected, stored, and protected.
 
 ### Terms & Conditions
-https://mp-8167adb1.zappy5.app/terms
+https://example.com/terms
 Legal terms describing service usage, rights, and policies.
 
 ### Accessibility Statement
-https://mp-8167adb1.zappy5.app/accessibility
+https://example.com/accessibility
 Information about WCAG compliance and accessibility features.
 
 ---
@@ -51,8 +51,8 @@ Information about WCAG compliance and accessibility features.
 - (No contact details configured yet.)
 
 ### Contact form
-- URL: https://mp-8167adb1.zappy5.app/contact
-- Endpoint: https://mp-8167adb1.zappy5.app/api/email/contact-form
+- URL: https://example.com/contact
+- Endpoint: https://example.com/api/email/contact-form
 - Method: POST
 - Content-Type: application/json
 - Fields:
@@ -93,6 +93,6 @@ Insurance Operations Services
 
 # Machine-readable feeds
 
-- Sitemap (XML): https://mp-8167adb1.zappy5.app/sitemap.xml
-- Robots: https://mp-8167adb1.zappy5.app/robots.txt
-- Flattened page text (for LLMs): https://mp-8167adb1.zappy5.app/llms-full.txt
+- Sitemap (XML): https://example.com/sitemap.xml
+- Robots: https://example.com/robots.txt
+- Flattened page text (for LLMs): https://example.com/llms-full.txt
