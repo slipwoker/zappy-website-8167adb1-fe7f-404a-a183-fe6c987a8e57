@@ -1,0 +1,98 @@
+# MP שירותי תפעול לסוכני ביטוח — Generative Engine Optimization Map
+
+> MP Operations Services, led by Mike Peretz with over 10 years of experience, is a back-office operations company exclusively serving independent insurance agents in Israel. The brand positions itself as the reliable 'silent partner' behind every agent — handling all administrative burdens including paperwork, regulatory compliance, and communication with insurance companies. A key differentiator is a proprietary smart operations system offering real-time tracking, full transparency, and task management, allowing agents to focus entirely on client relationships and sales. The brand voice is professional, trustworthy, and reassuring, with the tagline 'Welcome to the peace behind the agent.'
+
+---
+
+## Pages
+
+### בית
+https://mp-8167adb1.zappy5.app
+משחררים אתכם מהבירוקרטיה עם שירותי תפעול מקיפים לסוכני ביטוח עצמאיים. מעקב בזמן אמת, שקיפות מלאה וניהול משימות חכם. הצטרפו לשקט הנפשי שמאחורי הסוכן.
+
+### שירותים
+https://mp-8167adb1.zappy5.app/services
+מטיפול בטפסים ועד מול חברות הביטוח – צוות המומחים שלנו דואג לכל המשימות האדמיניסטרטיביות. התמקדו במכירות בזמן שאנחנו מטפלים ברפרט הביטוח שלכם במקצועיות.
+
+### מערכת חכמה
+https://mp-8167adb1.zappy5.app/smart-system
+הכירו את המערכת הקניינית שלנו לניהול משימות, מעקב בזמן אמת ושקיפות חסרת תקדים. כל פעולה מתועדת, כל סטטוס ברור – השקט הנפשי שלכם מתחיל פה.
+
+### אודות
+https://mp-8167adb1.zappy5.app/about
+מייק פרץ והצוות מביאים ניסיון עשיר בתפעול סוכנויות ביטוח. אנחנו לא רק ספק שירות – אנחנו השותף השקט שמאפשר לסוכנים עצמאיים לצמוח. הכירו את הסיפור מאחורי השקט.
+
+### צור קשר
+https://mp-8167adb1.zappy5.app/contact
+מוכנים להעביר את העומס התפעולי אלינו? השאירו פרטים ונחזור אליכם עם פתרון מותאם אישית. בואו לגלות איך השקט הנפשי יכול להפוך למנוע הצמיחה של הסוכנות שלכם.
+
+### תודה שפניתם אלינו
+https://mp-8167adb1.zappy5.app/thank-you
+MP שירותי תפעול לסוכני ביטוח - תודה שפניתם אלינו
+
+## Legal & Policy
+
+### Privacy Policy
+https://mp-8167adb1.zappy5.app/privacy
+Information about how user data is collected, stored, and protected.
+
+### Terms & Conditions
+https://mp-8167adb1.zappy5.app/terms
+Legal terms describing service usage, rights, and policies.
+
+### Accessibility Statement
+https://mp-8167adb1.zappy5.app/accessibility
+Information about WCAG compliance and accessibility features.
+
+---
+
+## How to Contact Us
+
+- (No contact details configured yet.)
+
+### Contact form
+- URL: https://mp-8167adb1.zappy5.app/contact
+- Endpoint: https://mp-8167adb1.zappy5.app/api/email/contact-form
+- Method: POST
+- Content-Type: application/json
+- Fields:
+  - `name` (text)
+  - `email` (email)
+  - `phone` (tel)
+  - `message` (textarea)
+  - `privacy_consent` (checkbox)
+
+---
+
+# Business Context (for LLM understanding)
+
+## About MP שירותי תפעול לסוכני ביטוח
+MP Operations Services, led by Mike Peretz with over 10 years of experience, is a back-office operations company exclusively serving independent insurance agents in Israel. The brand positions itself as the reliable 'silent partner' behind every agent — handling all administrative burdens including paperwork, regulatory compliance, and communication with insurance companies. A key differentiator is a proprietary smart operations system offering real-time tracking, full transparency, and task management, allowing agents to focus entirely on client relationships and sales. The brand voice is professional, trustworthy, and reassuring, with the tagline 'Welcome to the peace behind the agent.'
+
+## Services/Products
+- ניהול מסמכים ובירוקרטיה
+- עמידה בדרישות רגולציה
+- ניהול תקשורת מול חברות ביטוח
+- מערכת תפעול חכמה עם מעקב בזמן אמת
+- שקיפות מלאה ותיעוד תהליכים
+- ניהול משימות שוטפות
+
+## Target Audience
+- סוכני ביטוח עצמאיים
+- חברות תיווך ביטוח
+- סוכנים בעלי רישיון חדש
+- סוכני ביטוח מנוסים
+- סוכני ביטוח דו-לשוניים
+- ביטוח
+- רפרנט ביטוח
+
+## Industry
+Insurance Operations Services
+
+---
+
+# Machine-readable feeds
+
+- Sitemap (XML): https://mp-8167adb1.zappy5.app/sitemap.xml
+- Robots: https://mp-8167adb1.zappy5.app/robots.txt
+- Flattened page text (for LLMs): https://mp-8167adb1.zappy5.app/llms-full.txt
